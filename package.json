@@ -5,15 +5,18 @@
   "description": "Moonbase Co. WordPress starter theme",
   "dependencies": {},
   "devDependencies": {
+    "babel-preset-latest": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
     "gulp": "^3.9.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-browserify": "^0.5.1",
     "gulp-concat-util": "^0.5.2",
     "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
-    "babel-preset-latest": "^6.16.0",
     "jquery": "^3.1.1",
-    "gulp-sourcemaps": "^1.9.1"
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "webpack-stream": "^3.2.0"
   },
   "author": "Moonbase Co.",
   "license": "UNLICENSED",
