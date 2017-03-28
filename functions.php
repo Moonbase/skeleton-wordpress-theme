@@ -22,10 +22,11 @@ class MySite extends TimberSite {
 
     add_filter('timber_context', array($this, 'add_to_context'));
 		add_filter('get_twig', array($this, 'add_to_twig'));
+		add_filter('acf/settings/save_json', array($this, 'configure_acf_save'));
+		add_filter('acf/settings/load_json', array($this, 'configure_acf_load'));
 
     add_action('admin_menu', array($this, 'configure_admin_menu'));
     add_action('init', array($this, 'load_plugins'));
-    add_action('init', array($this, 'configure_acf'));
     add_action('init', array($this, 'register_post_types'));
 		add_action('init', array($this, 'register_taxonomies'));
 
@@ -51,11 +52,15 @@ class MySite extends TimberSite {
     // include_once(TEMPLATEPATH . '/plugins/my-plugin.php');
   }
 
-  function configure_acf() {
-    $acf_config = __DIR__  . '/config/acf.php';
-    if(file_exists($acf_config)) {
-  		include($acf_config);
-    }
+  function configure_acf_save($path) {
+    $path = __DIR__ . '/config/acf-json';
+    return $path;
+	}
+
+	function configure_acf_load($paths) {
+    unset($paths[0]);
+    $paths[] = __DIR__ . '/config/acf-json';
+    return $paths;
 	}
 
 	function add_to_context( $context ) {
