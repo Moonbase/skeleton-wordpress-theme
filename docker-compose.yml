@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    ports:
+      - 8080:80
+    depends_on:
+      - mysql
+    volumes:
+      - .:/var/www/html/wp-content/themes/wordpress-theme
+    environment:
+      WORDPRESS_DB_PASSWORD: moonbase
+  mysql:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: moonbase
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+volumes:
+  mysql_data:
