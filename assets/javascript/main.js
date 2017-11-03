@@ -1,4 +1,4 @@
-$(document).ready(function() {
-  var version = $.fn.jquery;
-	console.info(`Using jQuery version ${version}`);
+$(document).ready(() => {
+  const version = $.fn.jquery;
+	alert(`Using jQuery version ${version}`);
 });
