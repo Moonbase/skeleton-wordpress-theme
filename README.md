@@ -16,6 +16,10 @@ This theme requires the following WordPress plugins:
 ## Development requirements
 The following is required for your development environment:
 
+* Docker and Docker Compose
+
+or
+
 * Node: https://nodejs.org/en/
 * NPM: https://nodejs.org/en/
 * Yarn: https://yarnpkg.com
