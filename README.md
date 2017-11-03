@@ -29,7 +29,7 @@ or
 
 * `git clone <repository-url>` this repository.
 * Change into the new directory.
-* `yarn install`
+* `docker-compose build` or `yarn install`, depending on if you're using Docker or not.
 
 ## Developing
 The following commands are available for development:
