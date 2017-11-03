@@ -20,6 +20,8 @@ The following is required for your development environment:
 
 or
 
+* A webserver supporting PHP
+* A MySQL server
 * Node: https://nodejs.org/en/
 * NPM: https://nodejs.org/en/
 * Yarn: https://yarnpkg.com
