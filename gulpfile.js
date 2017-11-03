@@ -13,6 +13,7 @@ var buffer       = require('vinyl-buffer');
 // Specify vendor Javascript and CSS that you cannot use through NPM.
 // You need to restart Gulp after changing these variables.
 var vendorJS = [
+  'node_modules/jquery/dist/jquery.js',
 	// 'assets/vendor/some-library/some-library.js',
 ];
 var vendorCSS = [
@@ -55,7 +56,7 @@ gulp.task('compile:javascript', function() {
     .pipe(sourcemaps.write())
 		.pipe(gulp.dest('.'));
 
-  gulp.src(vendorJS, {base: 'assets/vendor/'})
+  gulp.src(vendorJS, {base: '.'})
     .pipe(sourcemaps.init())
 		.pipe(concat('vendor.js'))
 		.pipe(uglify())
