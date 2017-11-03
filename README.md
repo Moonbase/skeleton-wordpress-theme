@@ -33,6 +33,8 @@ The following commands are available for development:
 * `yarn run build`: Build all front-end assets.
 * `yarn run watch`: Starts a watcher that builds all front-end assets when they are changed.
 
+If you are using Docker, you can also run the yarn commands in the Docker container: `docker-compose exec web sh -c "cd /var/www/html/wp-content/themes/wordpress-theme && yarn watch"`.
+
 ## Updating from the skeleton
 This project was created using the skeleton-wordpress-theme project skeleton. If you want to update this project to the latest changes made to the skeleton, follow these steps:
 
