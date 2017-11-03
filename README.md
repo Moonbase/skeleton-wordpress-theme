@@ -23,8 +23,7 @@ or
 * A webserver supporting PHP
 * A MySQL server
 * Node: https://nodejs.org/en/
-* NPM: https://nodejs.org/en/
-* Yarn: https://yarnpkg.com
+* NPM: https://nodejs.org/en/, or Yarn: https://yarnpkg.com
 
 ## Installation
 
